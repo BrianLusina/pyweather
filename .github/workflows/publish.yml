@@ -1,0 +1,17 @@
+name: Publish PyPI
+
+on:
+  push:
+    tags:
+      # reference: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#patterns-to-match-branches-and-tags
+      - '*' # Push events to every tag including hierarchical tags like v1.0/beta
+
+jobs:
+  publish-pypi:
+    name: Publish PyPI
+    uses: SanctumLabs/ci-workflows/.github/workflows/python-pypi-publish.yml@main
+    with:
+        command: make publish
+        version: ${{ github.ref_name }}
+    secrets:
+        pypi_token: ${{ secrets.PYPI_TOKEN }}

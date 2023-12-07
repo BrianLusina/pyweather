@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "hangman"
+# This version field is not being used. The version field is dynamically updated as below
+version = "0.0.0"
+description = "Hangman game in the terminal"
+authors = ["BrianLusina <12752833+BrianLusina@users.noreply.github.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.12.0"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.0.2"
+pytest = "^7.4.3"
+black = "^23.11.0"
+pre-commit = "^3.5.0"
+flake8 = "^6.1.0"
+mypy = "^1.7.0"
+coverage = "^7.3.2"
+pytest-cov = "^4.1.0"
+twine = "^4.0.2"
+
+[tool.mypy]
+disallow_incomplete_defs = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+no_implicit_reexport = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+warn_unused_ignores = true
+ignore_missing_imports = true
+
+# reference: https://github.com/mtkennerly/poetry-dynamic-versioning
+[tool.poetry-dynamic-versioning]
+enable = true
+vcs = "git"
+style = "semver"
+latest-tag = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
