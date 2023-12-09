@@ -5,6 +5,9 @@ import sys
 from typing import Dict, Any
 from dataclasses import dataclass
 
+REVERSE = "\033[;7m"
+RESET = "\033[0m"
+
 
 @dataclass
 class ApiConfig:
@@ -34,7 +37,7 @@ class WeatherData:
     use_imperial: bool = False
 
     def display(self, padding: int = 20) -> str:
-        return f"{self.city}:{padding} \t{self.description.capitalize():^{padding}} ({self.temperature}°{'F' if self.use_imperial else 'C'})"
+        return f"{REVERSE}{self.city:{padding}{RESET}} \t{self.description.capitalize():^{padding}} ({self.temperature}°{'F' if self.use_imperial else 'C'})"
 
     @staticmethod
     def from_json(data: Dict[str, Any]) -> 'WeatherData':
