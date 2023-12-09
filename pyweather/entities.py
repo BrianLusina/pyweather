@@ -33,8 +33,8 @@ class WeatherData:
     temperature: float
     use_imperial: bool = False
 
-    def display(self) -> str:
-        return f"{self.city}  {self.description.capitalize()} ({self.temperature}°{'F' if self.use_imperial else 'C'})"
+    def display(self, padding: int = 20) -> str:
+        return f"{self.city}:{padding} \t{self.description.capitalize():^{padding}} ({self.temperature}°{'F' if self.use_imperial else 'C'})"
 
     @staticmethod
     def from_json(data: Dict[str, Any]) -> 'WeatherData':
