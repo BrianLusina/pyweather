@@ -1,24 +1,12 @@
 """
 Utility functions
 """
-from typing import Dict
-from dataclasses import dataclass
+from typing import Dict, Any
 from pathlib import Path
 from configparser import ConfigParser
+from pyweather.entities import ApiConfig
 
 _SECRETS_FILE = Path(__file__).parent / "secrets.ini"
-
-
-@dataclass
-class ApiConfig:
-    """
-    ApiConfig that contains information for setting up connection to Weather API
-    Args:
-        api_key (str): API Key used to authenticate with API
-        base_url (str): Base URL of API
-    """
-    api_key: str
-    base_url: str
 
 
 def get_api_config(secrets_file: Path = _SECRETS_FILE) -> ApiConfig:
@@ -44,3 +32,7 @@ def get_api_config(secrets_file: Path = _SECRETS_FILE) -> ApiConfig:
         base_url=base_url,
         api_key=api_key
     )
+
+
+def display_weather_info(weather_data: Dict[str, Any], imperial: bool = False):
+    pass

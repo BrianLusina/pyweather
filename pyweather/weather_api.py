@@ -1,7 +1,7 @@
 """
 Contains the weather API logic
 """
-from typing import Dict
+from typing import Dict, Any
 from urllib import parse, request, error
 import json
 import sys
@@ -27,7 +27,7 @@ def _build_weather_url(city: str, imperial: bool = False) -> str:
     return url
 
 
-def get_weather_data(city: str, imperial: bool = False) -> Dict:
+def get_weather_data(city: str, imperial: bool = False) -> Dict[str, Any]:
     """Makes an API request to a URL and returns the data as a Python object.
 
     Args:
