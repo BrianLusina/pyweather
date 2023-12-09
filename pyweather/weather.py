@@ -1,12 +1,10 @@
 """
-Contains the game logic
+Contains the weather API logic
 """
-from typing import Set
-
-MAX_INCORRECT_GUESSES = 6
+from configparser import ConfigParser
 
 
-def game_over(wrong_guesses: int, target_word: str, guessed_letters: Set[str]) -> bool:
+def _get_api_key(wrong_guesses: int, target_word: str, guessed_letters: Set[str]) -> bool:
     """
     Checks if the game is over based on the number of wrong guesses, target word and the guessed letters. It returns
     True if the number of wrong guesses is equal to the maximum allowed incorrect guesses, which is defaulted to 6.
