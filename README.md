@@ -48,10 +48,12 @@ temperature formatted visually with colors, spacing and emojis.
 
    ```ini
    [openweather]
+   base_url=http://api.openweathermap.org/data/2.5/weather
    api_key=<YOUR-OPENWEATHER-API-KEY>
    ```
 
-   > Enter your Open Weather API Key in the provided placeholder
+   > Enter your Open Weather API Key in the provided placeholder. You can optionally change the base url, but this is
+   already defaulted
 
 3. Install `pyweather` in editable mode:
    ```shell
