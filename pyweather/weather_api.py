@@ -1,11 +1,11 @@
 """
 Contains the weather API logic
 """
-from typing import Dict, Any
 from urllib import parse, request, error
 import json
 import sys
 from pyweather.utils import get_api_config
+from pyweather.entities import WeatherData
 
 
 def _build_weather_url(city: str, imperial: bool = False) -> str:
@@ -27,7 +27,7 @@ def _build_weather_url(city: str, imperial: bool = False) -> str:
     return url
 
 
-def get_weather_data(city: str, imperial: bool = False) -> Dict[str, Any]:
+def get_weather_data(city: str, imperial: bool = False) -> WeatherData:
     """Makes an API request to a URL and returns the data as a Python object.
 
     Args:
@@ -39,18 +39,21 @@ def get_weather_data(city: str, imperial: bool = False) -> Dict[str, Any]:
     """
     try:
         query_url = _build_weather_url(city, imperial)
-        response = request.urlopen(query_url)
+        with request.urlopen(query_url) as response:
+            data = response.read()
     except error.HTTPError as e:
         if e.code == 401:
-            sys.exit(f"Access denied. Check that your API Key is correct")
+            sys.exit("Access denied. Check that your API Key is correct")
         if e.code == 404:
-            sys.exit(f"Can't find the weather data for city {city}. It does not seem to exist...")
+            sys.exit(
+                f"Can't find the weather data for city {city}. It does not seem to exist..."
+            )
         else:
             sys.exit(f"Something terrible has happened. Error: {e}")
 
-    data = response.read()
-
     try:
-        return json.loads(data)
+        json_data = json.loads(data)
+        weather_data = WeatherData.from_json(json_data)
+        return weather_data
     except json.JSONDecodeError as jde:
         sys.exit(f"Could not read server response. Error: {jde}")

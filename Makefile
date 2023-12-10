@@ -29,7 +29,7 @@ install: ## Installs dependencies
 	pipenv install
 
 run: ## Runs application
-	python hangman
+	python pyweather
 
 .PHONY: test
 test: ## Runs tests
@@ -37,23 +37,23 @@ test: ## Runs tests
 
 .PHONY: test-cover
 test-cover: ## Runs tests with coverage
-	poetry run coverage run --source='./hangman/' -m pytest -v --junitxml junit-report.xml tests/ && coverage xml && coverage report -m
+	poetry run coverage run --source='./pyweather/' -m pytest -v --junitxml junit-report.xml tests/ && coverage xml && coverage report -m
 
 .PHONY: format-black
 format-black: ## Formats the files with black
-	poetry run black hangman/
+	poetry run black pyweather/
 
 .PHONY: lint-flake8
 lint-flake8: ## lints project using flake8
-	poetry run flake8 hangman/
+	poetry run flake8 pyweather/
 
 .PHONY: lint-mypy
 lint-mypy: ## lints project using mypy
-	poetry run mypy hangman/
+	poetry run mypy pyweather/
 
 .PHONY: lint-pylint
 lint-pylint: ## Runs linting with pylint
-	pylint hangman
+	pylint pyweather
 
 .PHONY: lint
 lint: format-black lint-flake8 lint-mypy lint-pylint

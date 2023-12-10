@@ -1,3 +1,7 @@
+"""
+Style utils
+"""
+
 PADDING = 20
 
 RED = "\033[1;31m"
@@ -11,5 +15,10 @@ REVERSE = "\033[;7m"
 RESET = "\033[0m"
 
 
-def change_color(color):
+def change_color(color: str) -> None:
+    """
+    Change the color of the terminal output
+    Args:
+        color (str): the color to use on the display
+    """
     print(color, end="")

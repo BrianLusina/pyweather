@@ -12,7 +12,8 @@ def get_command_line_args() -> Namespace:
         Namespace: populated namespace object
     """
     parser = argparse.ArgumentParser(
-        prog="pyweather", description="Gets weather and temperature information for a city"
+        prog="pyweather",
+        description="Gets weather and temperature information for a city",
     )
 
     # Argument to get the city name, allows users to pass in city names made up of more than 1 word, e.g. New York
@@ -27,7 +28,6 @@ def get_command_line_args() -> Namespace:
     parser.add_argument(
         "-i",
         "--imperial",
-        type=str,
         action="store_true",
         help="display daily temperatures in imperial units",
     )
