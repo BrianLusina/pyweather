@@ -63,8 +63,8 @@ temperature formatted visually with colors, spacing and emojis.
 
 ## Execution
 
-To execute `hangman`, go ahead and run the below command:
+To execute `pyweather`, go ahead and run the below command:
 
 ```shell
-python hangman
+python pyweather --help
 ```
