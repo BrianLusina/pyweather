@@ -16,7 +16,7 @@ black = "^25.1.0"
 pre-commit = "^4.1.0"
 flake8 = "^7.1.2"
 mypy = "^1.15.0"
-coverage = "^7.6.12"
+coverage = "^7.7.0"
 pytest-cov = "^6.0.0"
 twine = "^6.1.0"
 
