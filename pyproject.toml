@@ -17,7 +17,7 @@ pre-commit = "^4.2.0"
 flake8 = "^7.1.2"
 mypy = "^1.15.0"
 coverage = "^7.7.1"
-pytest-cov = "^6.0.0"
+pytest-cov = "^6.1.0"
 twine = "^6.1.0"
 
 [tool.mypy]
