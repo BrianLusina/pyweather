@@ -33,23 +33,23 @@ run: ## Runs application
 
 .PHONY: test
 test: ## Runs tests
-	poetry run pytest -vv -s -o log_cli=true -o log_cli_level=DEBUG -o cache_dir=/tmp tests/$(test)
+	uv run pytest -vv -s -o log_cli=true -o log_cli_level=DEBUG -o cache_dir=/tmp tests/$(test)
 
 .PHONY: test-cover
 test-cover: ## Runs tests with coverage
-	poetry run coverage run --source='./pyweather/' -m pytest -v --junitxml junit-report.xml tests/ && coverage xml && coverage report -m
+	uv run coverage run --source='./pyweather/' -m pytest -v --junitxml junit-report.xml tests/ && coverage xml && coverage report -m
 
 .PHONY: format-black
 format-black: ## Formats the files with black
-	poetry run black pyweather/
+	uv run black pyweather/
 
 .PHONY: lint-flake8
 lint-flake8: ## lints project using flake8
-	poetry run flake8 pyweather/
+	uv run flake8 pyweather/
 
 .PHONY: lint-mypy
 lint-mypy: ## lints project using mypy
-	poetry run mypy pyweather/
+	uv run mypy pyweather/
 
 .PHONY: lint-pylint
 lint-pylint: ## Runs linting with pylint
@@ -64,13 +64,12 @@ clean: ## removes dist folder
 
 .PHONY: build
 build: ## builds project
-	poetry self add "poetry-dynamic-versioning[plugin]"
-	poetry build
+	uv build
 
 .PHONY: publish-gitlab
 publish-gitlab: build ## publish python package to Gitlab package registry
-	TWINE_PASSWORD=${CI_JOB_TOKEN} TWINE_USERNAME=gitlab-ci-token poetry run twine upload --repository-url ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi dist/*
+	TWINE_PASSWORD=${CI_JOB_TOKEN} TWINE_USERNAME=gitlab-ci-token uv run twine upload --repository-url ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi dist/*
 
 .PHONY: publish-pypi
 publish-pypi: build ## publish python package to PyPI
-	poetry run twine upload --verbose -u '__token__' dist/*
+	uv run twine upload --verbose -u '__token__' dist/*

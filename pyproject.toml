@@ -1,47 +1,30 @@
-[tool.poetry]
+[project]
 name = "pyweather"
-# This version field is not being used. The version field is dynamically updated as below
-version = "0.0.0-post.11+c22f808"
-description = "Weather CLI in the terminal"
+version = "0.1.0"
+description = "Weather Assistant"
 authors = ["BrianLusina <12752833+BrianLusina@users.noreply.github.com>"]
 license = "MIT"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "langchain>=1.0.7",
+    "langchain-google-genai>=3.0.3",
+    "langchain-mcp-adapters>=0.1.13",
+    "langgraph>=1.0.3",
+    "mcp>=1.21.2",
+]
 
-[tool.poetry.dependencies]
-python = "^3.12.0"
-
-[tool.poetry.group.dev.dependencies]
-pylint = "^4.0.3"
-pytest = "^9.0.1"
-black = "^25.11.0"
-pre-commit = "^4.4.0"
-flake8 = "^7.3.0"
-mypy = "^1.18.2"
-coverage = "^7.11.3"
-pytest-cov = "^7.0.0"
-twine = "^6.2.0"
-
-[tool.mypy]
-disallow_incomplete_defs = true
-disallow_subclassing_any = true
-disallow_untyped_calls = true
-disallow_untyped_decorators = true
-disallow_untyped_defs = true
-no_implicit_reexport = true
-strict_equality = true
-warn_redundant_casts = true
-warn_return_any = true
-warn_unreachable = true
-warn_unused_configs = true
-warn_unused_ignores = true
-ignore_missing_imports = true
-
-# reference: https://github.com/mtkennerly/poetry-dynamic-versioning
-[tool.poetry-dynamic-versioning]
-enable = false
-vcs = "git"
-style = "semver"
-latest-tag = true
-
-[build-system]
-requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
-build-backend = "poetry_dynamic_versioning.backend"
+[dependency-groups]
+lint = [
+    "pre-commit>=4.4.0",
+    "pyrefly>=0.42.1",
+    "ruff>=0.14.5",
+]
+test = [
+    "coverage>=7.11.3",
+    "pytest>=9.0.1",
+    "pytest-cov>=7.0.0",
+]
+tools = [
+    "twine>=6.2.0",
+]

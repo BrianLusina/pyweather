@@ -33,6 +33,9 @@ class WeatherData:
     city: str
     description: str
     temperature: float
+    feels_like: int
+    humidity: int
+    wind_speed: int
     use_imperial: bool = False
     weather_id: int = 0
 
@@ -40,6 +43,18 @@ class WeatherData:
         return (
             f"ID: {self.weather_id}, City: {self.city}, description: {self.description} "
             f"({self.temperature}°{'F' if self.use_imperial else 'C'})"
+        )
+
+    def to_json(self) -> Dict[str, str]:
+        return dict(
+            location=self.city,
+            description=self.description,
+            temperature=self.temperature,
+            use_imperial=self.use_imperial,
+            weather_id=self.weather_id,
+            feels_like_celsius=f"{self.feels_like}°C",
+            humidity=f"{self.humidity}%",
+            wind_speed_mps=f"{self.wind_speed} m/s",
         )
 
     @staticmethod
@@ -56,12 +71,18 @@ class WeatherData:
             weather_description = data["weather"][0]["description"]
             temperature = data["main"]["temp"]
             weather_id = data["weather"][0]["id"]
+            feels_like = data["main"]["feels_like"]
+            humidity = data["main"]["humidity"]
+            wind_speed = data["wind"]["speed"]
 
             return WeatherData(
                 city=city,
                 description=weather_description,
                 temperature=temperature,
                 weather_id=weather_id,
+                feels_like=feels_like,
+                humidity=humidity,
+                wind_speed=wind_speed,
             )
         # pylint: disable=broad-exception-caught
         except Exception as e:
