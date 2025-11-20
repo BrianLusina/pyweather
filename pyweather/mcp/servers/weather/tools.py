@@ -1,9 +1,9 @@
 from typing import Dict
-from pyweather.mcp.servers.weather.server import mcp_server
+from pyweather.mcp.servers.weather.server import mcp
 from pyweather.api import get_weather_data
 
 
-@mcp_server.tool()
+@mcp.tool()
 def get_weather(location: str) -> Dict[str, str]:
     """
     Fetches the current weather for a specified location using the OpenWeatherMap API.

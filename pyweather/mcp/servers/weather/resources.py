@@ -1,8 +1,8 @@
 from pathlib import Path
-from pyweather.mcp.servers.weather.server import mcp_server
+from pyweather.mcp.servers.weather.server import mcp
 
 
-@mcp_server.resource("file://delivery_log")
+@mcp.resource("file://delivery_log")
 def delivery_log_resource() -> list[str]:
     """
     Reads a delivery log file and returns its contents as a list of lines.

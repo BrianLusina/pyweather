@@ -1,7 +1,7 @@
-from pyweather.mcp.servers.weather.server import mcp_server
+from pyweather.mcp.servers.weather.server import mcp
 
 
-@mcp_server.prompt()
+@mcp.prompt()
 def compare_weather_prompt(location_a: str, location_b: str) -> str:
     """
     Generates a clear, comparative summary of the weather between two specified locations.

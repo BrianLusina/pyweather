@@ -1,5 +1,5 @@
-from pyweather.mcp.servers.weather.server import mcp_server
+from pyweather.mcp.servers.weather.server import mcp
 
 
 if __name__ == "__main__":
-    mcp_server.run(transport="stdio")
+    mcp.run(transport="stdio")

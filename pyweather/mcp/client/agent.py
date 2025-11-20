@@ -1,3 +1,4 @@
+from typing import List
 from langgraph.graph import StateGraph, START, END
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.prebuilt import tools_condition, ToolNode
@@ -5,21 +6,17 @@ from langgraph.prebuilt import tools_condition, ToolNode
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
-from langchain_mcp_adapters.tools import load_mcp_tools
 from pyweather.mcp.client.entities import State
 
 
-async def create_graph(session):
-    # Load tools from MCP server
-    tools = await load_mcp_tools(session)
-
+async def create_graph(tools: List):
     # LLM configuration
     llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0, google_api_key="{{GOOGLE_GEMINI_API_KEY}}")
     llm_with_tools = llm.bind_tools(tools)
 
     # Prompt template with user/assistant chat only
     prompt_template = ChatPromptTemplate.from_messages([
-        ("system", "You are a helpful assistant that uses tools to get the current weather for a location."),
+        ("system", "You are a helpful assistant. You have access to tools for checking the weather and managing a to-do list. Use the tools when necessary based on the user's request."),
         MessagesPlaceholder("messages")
     ])
 
