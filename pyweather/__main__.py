@@ -2,7 +2,7 @@
 Entry point of the game
 """
 from pyweather.cli import get_command_line_args
-from pyweather.weather_api import get_weather_data
+from pyweather.api.weather_api import get_weather_data
 from pyweather.utils import display_weather_info
 
 
