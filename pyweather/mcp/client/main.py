@@ -1,9 +1,9 @@
 import asyncio
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
-from pyweather.clients.mcp.weather_agent import create_graph
-from pyweather.clients.mcp.prompts_handler import list_prompts, handle_prompt
-from pyweather.clients.mcp.resource_handler import list_resources, handle_resource
+from pyweather.mcp.client.agent import create_graph
+from pyweather.mcp.client.prompts_handler import list_prompts, handle_prompt
+from pyweather.mcp.client.resource_handler import list_resources, handle_resource
 
 
 # MCP server launch config

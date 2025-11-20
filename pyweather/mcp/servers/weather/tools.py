@@ -1,5 +1,5 @@
 from typing import Dict
-from pyweather.servers.mcp.server import mcp_server
+from pyweather.mcp.servers.weather.server import mcp_server
 from pyweather.api import get_weather_data
 
 

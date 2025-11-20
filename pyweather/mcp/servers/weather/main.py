@@ -1,4 +1,4 @@
-from pyweather.servers.mcp.server import mcp_server
+from pyweather.mcp.servers.weather.server import mcp_server
 
 
 if __name__ == "__main__":

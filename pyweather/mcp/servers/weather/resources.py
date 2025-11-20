@@ -1,5 +1,5 @@
 from pathlib import Path
-from pyweather.servers.mcp.server import mcp_server
+from pyweather.mcp.servers.weather.server import mcp_server
 
 
 @mcp_server.resource("file://delivery_log")

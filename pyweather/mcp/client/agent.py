@@ -6,7 +6,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
 from langchain_mcp_adapters.tools import load_mcp_tools
-from pyweather.clients.mcp.entities import State
+from pyweather.mcp.client.entities import State
 
 
 async def create_graph(session):
