@@ -16,7 +16,13 @@ async def create_graph(tools: List):
 
     # Prompt template with user/assistant chat only
     prompt_template = ChatPromptTemplate.from_messages([
-        ("system", "You are a helpful assistant. You have access to tools for checking the weather and managing a to-do list. Use the tools when necessary based on the user's request."),
+        ("system", "You are a helpful assistant with multiple roles. You have access to tools for checking the weather, "
+                   "managing a to-do list and access to RAG tools."
+                   "Use the tools when necessary based on the user's request."
+                   "Your role is to answer questions using the content of documents provided by the user. When a user "
+                   "gives you a file path, use your tool to ingest it into your memory. When they ask a question, use "
+                   "your search tool to find the relevant context within the ingested documents and use that context to "
+                   "form a clear answer."),
         MessagesPlaceholder("messages")
     ])
 

@@ -1,0 +1,60 @@
+Q: What are the official working hours?
+A: Our standard working hours are 9:00 AM to 5:00 PM from Monday to Friday, with a one-hour lunch break.
+Q: Can I work remotely full-time?
+A: Yes, our company supports fully remote roles where applicable. Your manager will confirm if your position qualifies for full-time remote work. Hybrid options are also available.
+Q: How do I apply for annual leave?
+A: Leave applications can be submitted through the HR portal. Please apply at least 3 days in advance and wait for manager approval.
+Q: Is there a dress code while working remotely?
+A: No formal dress code is required for remote work. However, employees are encouraged to dress appropriately for video meetings.
+Q: How often are team meetings held?
+A: Most teams conduct a weekly sync-up meeting. Your manager will share the schedule and meeting format.
+Q: How are public holidays observed in remote roles?
+A: Public holidays are observed as per your location or local calendar, based on your region and employment agreement.
+Q: What should I do if I experience internet issues during work?
+A: Notify your manager or team as soon as possible via email or messaging app. Try to reconnect or switch to a backup connection if available.
+Q: Are flexible working hours allowed?
+A: Yes, flexible working hours are permitted as long as you remain aligned with your team’s availability and complete your assigned tasks.
+Q: How do I receive my monthly salary slip?
+A: Salary slips are automatically generated and shared via the employee portal at the end of each month.
+Q: What tools should I use for remote collaboration?
+A: We recommend Slack or Teams for communication, Zoom or Google Meet for video calls, and Trello, Notion, or Confluence for project tracking and documentation.
+Q: Can I shift my work hours temporarily due to personal reasons?
+A: You may adjust your work hours temporarily with prior approval from your manager, provided it doesn’t affect team coordination or deadlines.
+Q: What’s the policy on attending virtual meetings?
+A: Employees are expected to attend scheduled meetings on time, actively participate, and turn on cameras when appropriate.
+Q: Where can I find the official leave calendar?
+A: The official leave and holiday calendar is available on the company’s HR portal under the "Time Off" section.
+Q: How is performance reviewed while working remotely?
+A: Performance reviews are conducted semi-annually. They are based on goal completion, collaboration, communication, and feedback from peers and managers.
+Q: Are there any wellness breaks during the day?
+A: Employees are encouraged to take short breaks throughout the day to rest and recharge. Managers may also schedule virtual coffee chats or non-work check-ins.
+Q: How do I stay connected with my team remotely?
+A: Frequent communication through chat apps, regular check-ins, and project tracking tools help keep everyone aligned and connected.
+Q: What’s the company’s stance on overtime?
+A: Employees are encouraged to maintain work-life balance. Overtime should only occur when necessary and must be approved by the manager in advance.
+Q: How do I raise a technical support request?
+A: You can log a ticket via the internal Helpdesk system, or email the IT support team with a description of your issue.
+Q: Can I work from a different city or country temporarily?
+A: Temporary relocation requests should be discussed with your manager and HR. They depend on time zone overlap, legal considerations, and team needs.
+Q: How do I keep track of my tasks while remote?
+A: Use your team’s preferred task management tool. Common choices include Jira, Asana, or a shared Google Sheet for simple tracking.
+Q: How do I report time off or sick days?
+A: Inform your manager directly and log your absence in the HR portal. For sick leave, a medical note may be requested for absences longer than 2 days.
+Q: Is there training for remote work tools?
+A: Yes, onboarding sessions include tool training, and additional guides are available in the internal knowledge base.
+Q: Are my work hours tracked?
+A: Work hours are not tracked minute-by-minute, but employees are expected to fulfill their responsibilities and attend key meetings.
+Q: What should I do if I miss a meeting?
+A: Notify your team, review the meeting notes or recording if available, and follow up on any assigned action items.
+Q: Are team-building activities offered remotely?
+A: Yes, virtual team-building events such as games, quizzes, and casual chats are held regularly to encourage collaboration and connection.
+Q: What’s the best way to ask for feedback remotely?
+A: You can schedule one-on-one time with your manager or ask for written feedback on completed projects.
+Q: How do I update my personal information in records?
+A: Log in to the HR portal and navigate to your profile settings. You can update your address, contact number, or emergency contact info there.
+Q: Can I split my workday into two parts?
+A: Split shifts may be allowed if they suit your role and team’s coordination. Please discuss with your manager before making any changes.
+Q: How do I receive company-wide announcements while remote?
+A: Important updates are shared through official email, the HR portal, and sometimes through a pinned message in the company-wide chat channel.
+Q: What are some tips to stay productive at home?
+A: Maintain a consistent routine, use a dedicated workspace, avoid multitasking, and schedule regular breaks to stay focused and energized.

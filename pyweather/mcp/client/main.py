@@ -16,6 +16,11 @@ server_configs = {
         "command": "python",
         "args": ["../mcp/servers/tasks/server.py"],
         "transport": "stdio",
+    },
+    "rag": {
+        "command": "python",
+        "args": ["../mcp/servers/rag/server.py"],
+        "transport": "stdio",
     }
 }
 
@@ -27,10 +32,18 @@ async def main():
     all_tools = await client.get_tools()
 
     agent = create_graph(all_tools)
-    print("MCP agent is ready.")
+    # --- Print statement for clarity ---
+    print("""
+    Hello! I'm your assistant.
+
+    To get started, tell me which document to read by providing its path, like:
+        Example: ingest_document /usercode/Guides/employee_handbook.txt
+
+    Once it's loaded, I can answer any questions you have about it!
+    """)
 
     # Add instructions for the new prompt commands
-    print("Type a question, or use one of the following commands:")
+    print("Additionally, you have other options I can help you with using one of the following commands:")
     print("  /prompts                           - to list available prompts")
     print("  /prompt <server_name> <prompt_name> \"args\"...  - to run a specific prompt")
     print("  /resources                       - to list available resources")
