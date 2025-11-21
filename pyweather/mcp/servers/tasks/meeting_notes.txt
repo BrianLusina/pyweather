@@ -1,0 +1,17 @@
+Weekly UX Sync – July 8, 2025
+Team: Product + Instructional Design
+
+Attendees: Lisa (PM), Arjun (UX), Dani (Instructional Designer), Omar (Support), Jenna (Growth)
+
+- Lisa opened the meeting with last week's engagement report — average course completion rate dropped to 58%. The team suspects it's due to longer module lengths and lack of motivation nudges.
+- Arjun showed heatmaps for the Data Science Foundations course — over 60% of users are skipping the video explanations and jumping straight to quizzes.
+- Action: Arjun to design a lightweight “quick recap” section before quizzes to test if it improves retention.
+- Dani brought up feedback from users in the AI for Beginners course — many felt unsure about their progress. “I don’t know if I’m doing well or just clicking next,” one said.
+- Action: Dani will prototype a visual progress tracker for module pages by next week.
+- Omar mentioned that support has received multiple tickets asking how to reset or revisit quizzes.
+- Note: A lot of confusion seems to stem from terminology — “module,” “lesson,” and “unit” are being used interchangeably.
+- Jenna suggested we consider push/email nudges mid-week to remind learners to continue their course. Maybe a motivational quote or highlight of how many people completed that same module.
+- Action: Jenna to draft 2–3 motivational nudge email templates for A/B testing.
+- Lisa asked if we can flag users who are stuck (e.g., inactive for 5+ days but not yet dropped) so we can experiment with re-engagement.
+
+Meeting ended at 11:35 AM.

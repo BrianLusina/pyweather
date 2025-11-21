@@ -34,7 +34,7 @@ async def main():
     print("  /prompts                           - to list available prompts")
     print("  /prompt <server_name> <prompt_name> \"args\"...  - to run a specific prompt")
     print("  /resources                       - to list available resources")
-    print("  /resource <resource_uri>         - to load a resource for the agent")
+    print("  /resource <server_name> <resource_uri>         - to load a resource for the agent")
 
     while True:
         # This variable will hold the final message to be sent to the agent
@@ -47,7 +47,7 @@ async def main():
         # --- Command Handling Logic ---
 
         if user_input.lower() == "/resources":
-            await list_resources(client)
+            await list_resources(client, server_configs)
             continue  # Command is done, loop back for next input
         elif user_input.lower() == "/resource":
             resource_content = await handle_resource(client, user_input)
