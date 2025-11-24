@@ -6,7 +6,7 @@ from langgraph.prebuilt import tools_condition, ToolNode
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
-from pyweather.mcp.client.entities import State
+from pyweather.mcp.client.langchain.entities import State
 
 
 async def create_graph(tools: List):

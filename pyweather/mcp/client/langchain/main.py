@@ -1,7 +1,7 @@
 import asyncio
-from pyweather.mcp.client.agent import create_graph
-from pyweather.mcp.client.prompts_handler import list_prompts, handle_prompt
-from pyweather.mcp.client.resource_handler import list_resources, handle_resource
+from pyweather.mcp.client.langchain.agent import create_graph
+from pyweather.mcp.client.langchain.prompts_handler import list_prompts, handle_prompt
+from pyweather.mcp.client.langchain.resource_handler import list_resources, handle_resource
 from langchain_mcp_adapters.client import MultiServerMCPClient
 
 # --- Multi-server configuration dictionary ---

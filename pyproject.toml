@@ -15,6 +15,9 @@ dependencies = [
     "langgraph>=1.0.3",
     "mcp>=1.21.2",
     "langchain-chroma>=1.0.0",
+    "llama-index>=0.14.8",
+    "llama-index-llms-google-genai>=0.7.3",
+    "llama-index-tools-mcp>=0.4.3",
 ]
 
 [dependency-groups]
