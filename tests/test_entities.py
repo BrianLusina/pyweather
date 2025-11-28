@@ -1,5 +1,5 @@
 import unittest
-from pyweather.entities import WeatherData
+from app.entities import WeatherData
 
 
 class WeatherDataTestCase(unittest.TestCase):
@@ -12,15 +12,8 @@ class WeatherDataTestCase(unittest.TestCase):
 
         data = {
             "name": city,
-            "weather": [
-                {
-                    "id": weather_id,
-                    "description": description
-                }
-            ],
-            "main": {
-                "temp": temperature
-            },
+            "weather": [{"id": weather_id, "description": description}],
+            "main": {"temp": temperature},
         }
 
         actual = WeatherData.from_json(data)
@@ -31,5 +24,5 @@ class WeatherDataTestCase(unittest.TestCase):
         self.assertEqual(temperature, actual.temperature)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

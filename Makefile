@@ -28,8 +28,13 @@ help: ## describe all commands
 install: ## Installs dependencies
 	pipenv install
 
+.PHONY: run
 run: ## Runs application
-	python pyweather
+	cd src && python app/clients/mcp/main.py
+
+.PHONY: run-langchain
+run-langchain: ## Runs application
+	cd src && python app/langchain_client.py
 
 .PHONY: test
 test: ## Runs tests
@@ -41,19 +46,34 @@ test-cover: ## Runs tests with coverage
 
 .PHONY: format-black
 format-black: ## Formats the files with black
-	uv run black pyweather/
+	uv run black src/
+
+.PHONY: ruff
+ruff: ## lints project using ruff
+	uv run ruff format .
+
+.PHONY: fix-ruff
+fix-ruff: ## Runs check with ruff & fixes files
+	uv run ruff check --fix .
+
+.PHONY: pyrefly
+pyrefly: ## Runs type checks with pyrefly
+	uv run pyrefly check
+
+.PHONY: lint
+lint: ruff pyrefly
 
 .PHONY: lint-flake8
 lint-flake8: ## lints project using flake8
-	uv run flake8 pyweather/
+	uv run flake8 src/
 
 .PHONY: lint-mypy
 lint-mypy: ## lints project using mypy
-	uv run mypy pyweather/
+	uv run mypy src/
 
 .PHONY: lint-pylint
 lint-pylint: ## Runs linting with pylint
-	pylint pyweather
+	pylint src
 
 .PHONY: lint
 lint: format-black lint-flake8 lint-mypy lint-pylint

@@ -63,7 +63,7 @@ temperature formatted visually with colors, spacing and emojis.
 
 3. Install `pyweather` in editable mode:
    ```shell
-   cd pyweather
+   cd src
    uv run pip install -e .
    ```
 
@@ -72,5 +72,5 @@ temperature formatted visually with colors, spacing and emojis.
 To execute `pyweather`, go ahead and run the below command:
 
 ```shell
-python pyweather --help
+python src --help
 ```
